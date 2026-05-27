@@ -4,6 +4,8 @@
 
 `webcli` 是一个基于 Python + Chrome Extension 的浏览器桥接命令行工具。它让人类用户和 agent 都可以通过终端控制真实的 Chrome 浏览器。
 
+> 说明：本项目基于 [jackwener/OpenCLI](https://github.com/jackwener/OpenCLI) 改编，并结合当前仓库的 Python CLI、bridge、Chrome extension 和 skill 结构做了重构与调整。
+
 核心组成包括：
 
 - `webcli browser ...` 命令
@@ -161,7 +163,6 @@ webcli/
 ├─ README.md
 ├─ LICENSE
 ├─ pyproject.toml
-├─ main.py
 ├─ docx/
 │  └─ logo.png
 ├─ extension/
