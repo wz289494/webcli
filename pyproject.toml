@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "webcli"
+version = "0.1.0"
+description = "A lightweight browser bridge CLI with Chrome extension support"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+keywords = ["cli", "browser", "chrome-extension", "automation", "websocket"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Internet :: WWW/HTTP :: Browsers",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+  "click>=8.1",
+  "websockets>=12,<16",
+]
+
+[project.scripts]
+webcli = "webcli_main:main"
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2.2",
+  "twine>=5.1.1",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["bridege", "browser_cli"]
+py-modules = ["webcli_main", "main", "browser_actions", "browser_js", "browser_runner", "protocol"]
